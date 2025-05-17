@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma Vidéo Responsive</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #7f8c8d;
+    }
+    .video-wrapper {
+      width: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 30px 0;
+    }
+    video {
+      width: 100%;
+      display: block;
+      background: #000;
+    }
+    .end-message {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      text-align: center;
+      margin: 60px 0;
+      color: #e74c3c;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Découvrez Ma Vidéo</h1>
+  <p class="intro">Cliquez sur le bouton de lecture pour commencer le visionnage</p>
+
+  <div class="video-wrapper">
+    <video 
+      controls 
+      preload="metadata" 
+      poster="poster.jpg"
+      aria-label="Vidéo démonstrative"
+    >
+      <source src="tableau.mp4" type="video/mp4">
+      <source src="tableau.webm" type="video/webm">
+      <track kind="captions" src="subtitles.vtt" srclang="fr" label="Français">
+      Votre navigateur ne prend pas en charge les vidéos HTML5.
+    </video>
+  </div>
+
+  <div class="end-message" aria-live="polite">
+    VOUS AVEZ TROUVÉ !
+  </div>
+</body>
+</html>
